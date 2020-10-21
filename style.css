@@ -1,80 +1,82 @@
-*{
-    padding: 0;
-    margin: 0;
+#background { 
+    background:url("desert.png");
+    width: 600px;
+    height: 400px;
+    margin: 40px auto;
+    overflow: hidden;
+
 
 }
 
-#game{
-    width: 700px;
-    height: 300px;
-    border: 1px solid black;
-    background-color: lemonchiffon;
-
-}
 #character {
-    width: 20px;
-    height: 20px;
-    background-color: black;
+    background:url("ninja.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 30px;
     position: relative;
-    left: 1px;
-    top: 280px;
-    border-radius: 50%;
-
-
-}
-*{
-    padding: 0;
-    margin: 0;
-
-}
-
-#game{
-    width: 700px;
-    height: 300px;
-    border: 1px solid black;
-    background-color: lemonchiffon;
-
-}
-#character {
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    position: relative;
-    left: 1px;
-    top: 280px;
-    border-radius: 50%;
-
+    top: 352px;
+    left: 40px;
 
 }
 
 .animate{
-    animation: jump 400ms;
-
+    animation: up 500ms;
 }
-
-@keyframes jump{
-    0%{top: 250px;}
-    45%{top: 100px;}
-    65%{top: 100px;}
-    85%{top: 130px;}
-    100%{top: 250px;}
-
-}
-
-#block{
-    width: 15px;
-    height: 45px;
-    background-color: orange;
+#snake {
+    background: url("snake.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 30px;
     position: relative;
-    top: 235px;
-    left: 700px;
-    animation: block 0.5s infinite linear;
-
+    top: 285px;
+    left: 400px;
+    animation: attack 1.2s infinite linear;
+    
 
 }
 
-@keyframes block{
-    0%{left:680px;}
-    100%{left:-40px;}
+#scorpion {
+    background: url("scorpion.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 30px;
+    position: relative;
+    top:223px;
+    left: 550px;
+    animation: zip 1.5s infinite linear;
+    animation-delay: 0.2s;
+
+}
+
+@keyframes attack {
+    0% {
+        left: 600px;
+    }
+    100% {
+        left: -40px;
+    }
+}
+
+@keyframes zip {
+    0% {
+        left: 600px;
+    }
+    20% {
+        left: 600px;
+    }
+    100%{
+        left:-40px;
+    }
+}
+
+@keyframes up{
+    0%{top: 350px;}
+    45%{top: 250px;}
+    65%{top: 250px;}
+    85%{top: 300px;}
+    100%{top: 350px;} 
 
 }
