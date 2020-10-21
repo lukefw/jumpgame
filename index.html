@@ -1,23 +1,39 @@
 <!DOCTYPE html>
-
 <html lang = "en">
 <head>
     <meta charset = "UTF-8">
-    <title>Game</title>
+    <title>Ninja Jump</title>
     <link rel = "stylesheet" href = "style.css">
-
+    <link rel = "https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js">
+    <link rel = "https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js">
+    <link rel = "https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js">
+    <link rel = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    
 </head>
 <body>
-    <p>Press any key to jump!</p>
-    <div id = "game">
-        <div id = "character">  
-        </div>
-        <div id = "block">
+    <div id = "background">
+        <div id = "character"></div>
+        <div id = "snake"></div>
+        <div id = "scorpion"></div>
+    </div>
+
+    <p id = "title" style = "left: 100px; top: 10px">Help this ninja escape the desert by dodging the snakes!</p>
+    <p>Jumps: <span id = "jumpSpan"></span></p>
+    <div id = "name">
+        <input id = "username">
+        <button id = "Enter">
+            Enter
+        </button>
+        <ul id = "list">
+        </ul>
+        <div id = "Your username">
         </div>
     </div>
-    <p>Jumps: <span id = "jumpSpan"></span></p>
-
+        
+        
 </body>
-<script src = "script.js">
-</script>
+<script src = "script.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </html>
